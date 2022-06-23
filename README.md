@@ -4,6 +4,7 @@ este es un proyecto creado en pyton cuya funcionalidad es recorrer dos carpetas 
 
 antes de comenzar la lista debo aclarar que para que funcione todo correctamente primero debe incresar las rutas de las dos carpetas correctamente y que las carpetas no deben ser iguales despues de esto escriba --operation y unicamente la letra del proceso que desee realizar ejemplo
 python modulos_dmx.py -1 C:\pruebas\carpeta1 -2 C:\pruebas\carpeta2 --operation s
+
 si necesita mas ayuda escriba python modulos_dmx.py -h
 
 >lista de funciones
