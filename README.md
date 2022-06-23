@@ -6,7 +6,7 @@ antes de comenzar la lista debo aclarar que para que funcione todo correctamente
 python modulos_dmx.py -1 C:\pruebas\carpeta1 -2 C:\pruebas\carpeta2 --operation s
 si necesita mas ayuda escriba python modulos_dmx.py -h
 
-##lista de comando 
+**lista de comando**
 
 "s"  esta opcion sirve para ver la lista de los archivos con mayor peso cuando exite un archivo con el mismo nombre en ambas carpetas
 "d" esta opcion sirve para ver la ultima fecha de modificacion  de los archivos cuyo nombre se el mismo
