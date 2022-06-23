@@ -5,7 +5,7 @@ import os
 import re
 import time
 from datetime import datetime
-#las importaciones
+#hasta aqui las importaciones
 def main():
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--dir1','-1',type=str,required=True,help='selecciona la ruta de la carpeta 1')
