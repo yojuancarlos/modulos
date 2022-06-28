@@ -11,7 +11,7 @@ def main():
     parser.add_argument("--size", '-s', required=False,action='store_true', help="diferencar archivos dmx por tamaño")
     parser.add_argument("--modificaton_date", "-d",required=False,action='store_true', help="diferenciar archivos dmx por fecha de modificacion")
     parser.add_argument("--fingerprint", "-f", required=False,action='store_true', help="diferenciar archivos dmx por figerprint")
-    parser.add_argument("--output", "-o", required=False, help="ruta del archivo json que se va a crear con los resultaods")
+    parser.add_argument("--output", "-o", required=True, help="ruta del archivo json que se va a crear con los resultaods")
     # Parseo de los argumentos
     args = parser.parse_args()
 
@@ -23,7 +23,8 @@ def print_args(args):
    modulos.validate_args(args)
    directory1 = args.dir1
    directory2 = args.dir2
-   print(f'Directorio 1: {directory1}  Directorio 2: {directory2}')
+   salida= args.output
+   print(f'Directorio 1: {directory1}  Directorio 2: {directory2}  salida {salida}')
 
 if __name__ == '__main__':
     main()
