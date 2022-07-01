@@ -1,7 +1,5 @@
 # Importamos funcion ArgumentParser
 import os
-def esarchivo(directory):
-    return os.path.isfile(directory)
 
 def existe_ruta(directory):
     return not os.path.exists(directory)

@@ -1,6 +1,7 @@
 import parametros
+
 def main():
-    parameters=parametros.parametros()
+    parameters=parametros.Parametros()
     parameters.validar()
     parameters.print_args()
 if __name__ == '__main__':
