@@ -5,7 +5,8 @@ import sys
 
 
 
-
+def esarchivo(directory):
+    return os.path.isfile(directory)
 
 def directorio_existe(directory):
     return not os.path.exists(directory)
