@@ -1,6 +1,8 @@
 import validaciones
 import argparse
-class parametros :
+class parametros:
+
+
     opciones = None
     argumentos = None
 

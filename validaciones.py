@@ -1,16 +1,10 @@
 # Importamos funcion ArgumentParser
 import os
-import argparse
-import sys
-
-
-
 def esarchivo(directory):
     return os.path.isfile(directory)
 
-def directorio_existe(directory):
+def existe_ruta(directory):
     return not os.path.exists(directory)
-
 
 def esdirectorio(directory):
 #si es directorio me retorna true sino lo es retorna false
@@ -19,6 +13,3 @@ def esdirectorio(directory):
 def esarchivo(directory):
 # si es archivo me retorna true sino lo es retorna false
     return os.path.isfile(directory)
-
-def directorios_iguales(directorio1, directorio2):
-    return not directorio1 == directorio2

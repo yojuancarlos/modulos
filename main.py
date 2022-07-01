@@ -1,7 +1,3 @@
-import os
-import validaciones
-import argparse
-import sys
 import parametros
 def main():
     parameters=parametros.parametros()
