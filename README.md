@@ -2,8 +2,8 @@
 este es un proyecto creado en pyton y que utiliza modulos para lograr que el proyecto sea reutizable, su funcionalidad es recorrer dos carpetas y filtrar archivos dmx, entre estos archivos se puede seleccionar una de varias funciones que existen para asi ver la imformacion que necesite como por ejemplo la ultima fecha de modificacion
 
 ## librerias que se deben importar
-> argparse
-> os
+> - argparse
+> - os
 ## lista de funciones
 
 - "--size" o "-s"  esta opcion sirve para ver la lista de los archivos con mayor peso cuando exite un archivo con el mismo nombre en ambas carpetas
