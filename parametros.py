@@ -30,13 +30,8 @@ class Parametros:
 
         # function to print both directories
     def print_args(self):
-        if self.validar():
-            directory1 = self.argumentos.dir1
-            directory2 = self.argumentos.dir2
-            salida = self.argumentos.output
-            print(f'Directorio 1: {directory1}  Directorio 2: {directory2}  salida {salida}')
-        else:
-            print("self.validar()")
+        print(argparse)
+#cuadro esto maltida sea pero para hoy
 
 
 
