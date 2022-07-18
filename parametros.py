@@ -29,7 +29,8 @@ class Parametros:
         return respuesta
 
         # function to print both directories
-
+    def print_args(self):
+        print(argparse)
 #cuadro esto maltida sea pero para hoy
 
 
