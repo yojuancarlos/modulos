@@ -19,3 +19,6 @@ este es un proyecto creado en pyton y que utiliza modulos para lograr que el pro
 - "--dir2" o "-2" esta opcion sirve para ver los archivos que solo existan em la carpeta 2
 
 > si necesita mas ayuda escriba  -h
+
+
+>puedes encontrar toda la documentacion de este proyecto en este enlace [documento compartido](https://docs.google.com/document/d/1dEbk0qI2qlFbcdrTo5B1w-_0NxUv8osXjdjIssEdNR0/edit#heading=h.3ti6jx56udpj).
