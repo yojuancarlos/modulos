@@ -30,7 +30,7 @@ def print_argst():
 
 
 
-def validar(self):
+def validart(self):
    respuesta = True
    self.argumentos = self.opciones.parse_args()
 
