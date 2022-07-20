@@ -20,18 +20,9 @@ class Parametros:
         self.opciones.add_argument("--output", "-o", required=True,
                                    help="ruta del archivo json que se va a crear con los resultaods")
 
-    def validar(self):
-        respuesta = True
-        self.argumentos = self.opciones.parse_args()
-        respuesta = (validaciones.esdirectorio(self.argumentos.dir1)
-                and validaciones.esdirectorio(self.argumentos.dir2)
-                and validaciones.existe_ruta(self.argumentos.output))
-        return respuesta
 
-        # function to print both directories
-    def print_args(self):
-        print(argparse)
-#cuadro esto maltida sea pero para hoy
+
+
 
 
 

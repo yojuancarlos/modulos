@@ -1,8 +1,7 @@
-# Importamos funcion ArgumentParser
 import os
 
 def existe_ruta(directory):
-    return not os.path.exists(directory)
+    return  os.path.exists(directory)
 
 def esdirectorio(directory):
 #si es directorio me retorna true sino lo es retorna false

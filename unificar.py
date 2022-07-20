@@ -1,13 +1,33 @@
-def print_args(args):
-   modulos.validate_args(args)
-   directory1 = args.dir1
-   directory2 = args.dir2
-   salida= args.output
-   print(f'Directorio 1: {directory1}  Directorio 2: {directory2}  salida {salida}')
+import validaciones
+import parametros
+
+
+clase_parametros = parametros.Parametros()
+
+def valida():
+    respuesta = True
+    clase_parametros.argumentos = clase_parametros.opciones.parse_args()
+
+    respuesta = (validaciones.esdirectorio(clase_parametros.argumentos.dir1)
+                 and validaciones.esdirectorio(clase_parametros.argumentos.dir2)
+                 and not validaciones.existe_ruta(clase_parametros.argumentos.output))
+    return respuesta
+
+def print_argst():
+   if valida():
+      directory1 = clase_parametros.argumentos.dir1
+      directory2 = clase_parametros.argumentos.dir2
+      salida = clase_parametros.argumentos.output
+      print(f'Directorio 1: {directory1}  Directorio 2: {directory2}  salida {salida}')
+   else:
+      print("self.validar()")
 
 
 
------------------
+
+
+
+
 
 
 def validar(self):

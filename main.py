@@ -1,8 +1,8 @@
 import parametros
-
+import unificar
 def main():
-    parameters=parametros.Parametros()
-    parameters.validar()
-    parameters.print_args()
+    parameters = unificar
+    parameters.valida()
+    parameters.print_argst()
 if __name__ == '__main__':
     main()
