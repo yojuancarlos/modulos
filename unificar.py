@@ -1,6 +1,6 @@
 import validaciones
 import parametros
-
+import os
 
 
 clase_parametros = parametros.Parametros()
@@ -40,6 +40,8 @@ def print_argst():
       directory2 = clase_parametros.argumentos.dir2
       salida = clase_parametros.argumentos.output
       print(f'Directorio 1: {directory1}  Directorio 2: {directory2}  salida {salida}')
+      print(os.listdir(directory1))
+      print(os.listdir(directory2))
    else:
       print("nooo pa, intente de nuevo")
 
