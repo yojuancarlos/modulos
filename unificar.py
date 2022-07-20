@@ -2,54 +2,44 @@ import validaciones
 import parametros
 
 
+
 clase_parametros = parametros.Parametros()
+
+def validaciones_totales():
+   if valida() and valida2() and valida3():
+       return True
+   else: return False
+
+def parseo():
+    clase_parametros.argumentos = clase_parametros.opciones.parse_args()
 
 def valida():
     respuesta = True
-    clase_parametros.argumentos = clase_parametros.opciones.parse_args()
-
+    parseo()
     respuesta = (validaciones.esdirectorio(clase_parametros.argumentos.dir1)
                  and validaciones.esdirectorio(clase_parametros.argumentos.dir2)
-                 and not validaciones.existe_ruta(clase_parametros.argumentos.output))
+                 and not validaciones.existe_ruta(clase_parametros.argumentos.output)
+                 and validaciones.carpeta_tiene_archivos(clase_parametros.argumentos.dir1)
+                 and validaciones.carpeta_tiene_archivos(clase_parametros.argumentos.dir2))
     return respuesta
-
+def valida2():
+    respuesta = True
+    parseo()
+    respuesta = (clase_parametros.argumentos.modificaton_date or clase_parametros.argumentos.size
+                 or clase_parametros.argumentos.fingerprint)
+    return respuesta
+def valida3():
+    respuesta = True
+    parseo()
+    if clase_parametros.argumentos.dir1 == clase_parametros.argumentos.dir2:
+        respuesta=False
+    return respuesta
 def print_argst():
-   if valida():
+   if validaciones_totales():
       directory1 = clase_parametros.argumentos.dir1
       directory2 = clase_parametros.argumentos.dir2
       salida = clase_parametros.argumentos.output
       print(f'Directorio 1: {directory1}  Directorio 2: {directory2}  salida {salida}')
    else:
-      print("self.validar()")
+      print("nooo pa, intente de nuevo")
 
-
-
-
-
-
-
-
-
-def validart(self):
-   respuesta = True
-   self.argumentos = self.opciones.parse_args()
-
-   respuesta = (self.argumentos.modificaton_date or self.argumentos.size or self.argumentos.fingerprint) \
-               and validaciones.esdirectorio(self.argumentos.dir1) \
-               and validaciones.esdirectorio(self.argumentos.dir2) \
-               and validaciones.directorio_existe(self.argumentos.output) \
-               and validaciones.directorios_iguales(self.argumentos.dir1, self.argumentos.dir2)
-
-   return respuesta
-
-   # function to print both directories
-
-
-def print_args(self):
-   if self.validar():
-      directory1 = self.argumentos.dir1
-      directory2 = self.argumentos.dir2
-      salida = self.argumentos.output
-      print(f'Directorio 1: {directory1}  Directorio 2: {directory2}  salida {salida}')
-   else:
-      print("self.validar()")

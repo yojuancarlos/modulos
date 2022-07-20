@@ -1,12 +1,18 @@
 import os
 
-def existe_ruta(directory):
-    return  os.path.exists(directory)
+def existe_ruta(directorio):
+    return  os.path.exists(directorio)
 
-def esdirectorio(directory):
+def esdirectorio(directorio):
 #si es directorio me retorna true sino lo es retorna false
-    return os.path.isdir(directory)
+    return os.path.isdir(directorio)
 
-def esarchivo(directory):
+def esarchivo(directorio):
 # si es archivo me retorna true sino lo es retorna false
-    return os.path.isfile(directory)
+    return os.path.isfile(directorio)
+
+def carpeta_tiene_archivos(directorio):
+    if os.listdir(directorio):
+        return True
+    else:
+        return False
