@@ -1,24 +1,40 @@
-import validaciones
+"""crrear clase AppUnificarDMX
+contructor de la clase
+dentro de la clase creo funcion recorrer_directorio
+dentro de recorrer_Directorio creo una funcion para recorrer el directorio
+tips
+usar
+os.walk
+organizar el directorio """
+import os
 
 
-def valida(clase_parametros):
-    respuesta = True
+class AppUnificarDMX:
+    directorio1 = None
+    directorio2 = None
+    json_salida = None
+    bandera_tamano = None
+    bandera_fecha = None
+    bandera_sha2 = None
 
-    respuesta = ((clase_parametros.argumentos.modificaton_date or clase_parametros.argumentos.size
-                 or clase_parametros.argumentos.fingerprint)and
-                 (clase_parametros.argumentos.dir1 == clase_parametros.argumentos.dir2)and
-ñ
-                 (validaciones.esdirectorio(clase_parametros.argumentos.dir1)
-                 and validaciones.esdirectorio(clase_parametros.argumentos.dir2)
-                 and not validaciones.existe_ruta(clase_parametros.argumentos.output)
-                 and validaciones.carpeta_tiene_archivos(clase_parametros.argumentos.dir1)
-                 and validaciones.carpeta_tiene_archivos(clase_parametros.argumentos.dir2)
-                 ))
-    if respuesta == True:
-        print("paso")
-    else:
-        print("no paso")
-    return respuesta
+    def __init__(self, dierectorio1: str, directorio2: str, json_salida: str,
+                 bandera_tamano: bool=False ,bandera_fecha : bool=False, bandera_sha2:bool = False):
+        self.directorio1 = dierectorio1
+        self.directorio2 = directorio2
+        self.json_salida = json_salida
+        self.bandera_tamano = bandera_tamano
+        self.bandera_fecha = bandera_fecha
+        self.bandera_sha2 = bandera_sha2
+        pass
+
+    def recorrer_directorio(self, directorio):
+        lista = os.listdir(directorio)
+        print(lista)
+
+    def ejecutar(self):
+
+
+
 
 
 
