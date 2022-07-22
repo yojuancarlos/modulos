@@ -20,7 +20,12 @@ class Parametros:
         self.opciones.add_argument("--output", "-o", required=True,
                                    help="ruta del archivo json que se va a crear con los resultaods")
 
+    def parseo(self):
+        self.argumentos = self.opciones.parse_args()
 
+#si todas las validaciones se cumplen se puede imprimir el mensaje
+    def print_argst(self):
+        print("paso")
 
 
 
