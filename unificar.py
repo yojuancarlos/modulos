@@ -32,6 +32,7 @@ class AppUnificarDMX:
         print(lista)
 
     def ejecutar(self):
+        "correr"
 
 
 

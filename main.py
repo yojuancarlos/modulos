@@ -5,12 +5,12 @@ import validaciones
 
 def main():
     argumento = parametros.Parametros()
-    app = unificar.AppUnificarDMX()
     argumento.parseo()
 
     if valida(argumento):
-        recorrer.recorrer_directorio(argumento.argumentos.dir1)
-        recorrer.recorrer_directorio(argumento.argumentos.dir2)
+        app = unificar.AppUnificarDMX(argumento.argumentos.dir1,argumento.argumentos.dir2,
+            argumento.argumentos.output,argumento.argumentos.size,
+            argumento.argumentos.modificaton_date,argumento.argumentos.fingerprint)
 
 
 def valida(parametros:parametros.Parametros):
