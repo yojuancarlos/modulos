@@ -43,7 +43,7 @@ class AppUnificarDMX:
         pass
 
     def tamano(self):
-        print("el tamaño fue de tales")
+        print("el tamaño fue de tales ffff")
 
     def fecha_modificacion(self):
         print("funcion fecha de modificacion")
