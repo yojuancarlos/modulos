@@ -1,41 +1,85 @@
-import validaciones
-import parametros
+import os
 
 
-# aqui uno todas las validaciones en una sola y utilizo la tabla de verdad de conjuncion
-def validaciones_totales():
-    if valida() and valida2() and valida3():
-        return True
-    else:
-        return False
+def decorador(func):
+    def wrapper(*args, **kwargs):
+        # func(*args, **kwargs)
+        archivos = kwargs['lista']
+        ruta = kwargs['ruta']
+        for archivo in archivos:
+            ruta_completa = os.path.join(ruta, archivo)
+            print(f'>> {ruta_completa}')
+            for funcion in args:
+                archivos[archivo][funcion] = f'valor calculado con {funcion}'
+                if 'error' in archivos[archivo]:
+                    archivos[archivo]['error'] += ' | mensaje de error'
+                else:
+                    archivos[archivo]['error'] = 'mensaje de error'
+
+        return archivos
+
+    return wrapper
 
 
-# esta es la primera validacion (la carpeta 1 y 2 tienen que ser directorios,la ruta de salida no puede existir la carpeta 1 y 2 tienen que tener al menos 1 archivo)
-def valida():
-    respuesta = True
-    respuesta = (validaciones.esdirectorio(clase_parametros.argumentos.dir1)
-                 and validaciones.esdirectorio(clase_parametros.argumentos.dir2)
-                 and not validaciones.existe_ruta(clase_parametros.argumentos.output)
-                 and validaciones.carpeta_tiene_archivos(clase_parametros.argumentos.dir1)
-                 and validaciones.carpeta_tiene_archivos(clase_parametros.argumentos.dir2)
+def vacia(*args, **kwargs):
+    pass
 
-                 )
+
+def listar_directorio(ruta: str) -> dict:
+    respuesta = {}
+    respuesta[ruta] = {}
+    # lista = os.listdir(ruta)
+    lista = ['ar1', 'ar2', 'ar3']
+    for item in lista:
+        respuesta[ruta][item] = {}
     return respuesta
 
 
-# esta es la validacion2 se debe seleccionar almenos una de las opciones
-def valida2():
-    respuesta = True
-    parseo()
-    respuesta = (clase_parametros.argumentos.modificaton_date or clase_parametros.argumentos.size
-                 or clase_parametros.argumentos.fingerprint)
+def dict_a_set(dict_ruta: dict) -> set:
+    respuesta = set()
+    for item in dict_ruta:
+        respuesta.add(item)
     return respuesta
 
 
-# esta el la validacion 3 la carpeta 1 debe ser diferente de la 2
-def valida3():
-    respuesta = True
-    parseo()
-    if clase_parametros.argumentos.dir1 == clase_parametros.argumentos.dir2:
-        respuesta = False
-    return respuesta
+dir1 = ['ar1', 'ar2', 'ar3']
+dir2 = ['ar3', 'ar4', 'ar5', 'ar6']
+
+ruta_dir1 = 'c:/ruta/dir1'
+ruta_dir2 = 'c:/ruta/dir2'
+dict_dir1 = listar_directorio(ruta_dir1)
+print(dict_dir1)
+conj_dir1 = dict_a_set(dict_dir1[ruta_dir1])
+print(conj_dir1)
+# conj_dir1=set(dir1)
+# conj_dir2=set(dir2)
+# print(conj_dir1 & conj_dir2)
+
+indexar_dir = decorador(vacia)
+print(indexar_dir('tamano', 'size', lista=dict_dir1[ruta_dir1], ruta=ruta_dir1))
+print(dict_dir1)
+# indexar_dir(lista=dir2)
+
+for dir in dict_dir1:
+    for arch in dict_dir1[dir]:
+        if 'error' in dict_dir1[dir][arch]:
+            lista_errores = dict_dir1[dir][arch]['error'].split('|')
+            print(lista_errores)
+
+
+
+"""""
+preguntas 
+
+
+if __name__ =="_main"
+    
+    
+kwargs----------------------->llave=valor 
+metodo  usando called
+
+metodos especiales
+
+
+tutorial yleld python
+"""""

@@ -11,6 +11,8 @@ def main():
         app = unificar.AppUnificarDMX(argumento.argumentos.dir1,argumento.argumentos.dir2,
             argumento.argumentos.output,argumento.argumentos.size,
             argumento.argumentos.modificaton_date,argumento.argumentos.fingerprint)
+        uni = unificar.AppUnificarDMX(argumento.argumentos.dir1,argumento.argumentos.dir2,argumento.argumentos.output)
+        uni.ejecutar()
 
 
 def valida(parametros:parametros.Parametros):
