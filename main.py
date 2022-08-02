@@ -1,10 +1,13 @@
 import parametros
 import unificar
 import validaciones
+from file import File
 
 
 def main():
-    argumento = parametros.Parametros()
+    ruta_parametros = 'parametros.json'
+    info_parametros = File.read_json(ruta_parametros)
+    argumento = parametros.Parametros("modulo para filtrar archivos dmx", info_parametros)
     argumento.parseo()
 
     if valida(argumento):

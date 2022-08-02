@@ -1,0 +1,41 @@
+{
+    "directorio1":{
+        "name": "dir1",
+        "alias": "1",
+        "required": true,
+        "help": "directorio uno con archivos dmx"
+    },
+    "directorio2":{
+        "name": "dir2",
+        "alias": "2",
+        "required": true,
+        "help": "directorio dos con archivos dmx"
+    },
+    "bandera_tamano":{
+        "name": "size",
+        "alias": "s",
+        "required": false,
+        "help": "diferencar archivos dmx por tamaño",
+        "action": "store_true"
+    },
+    "bandera_fecha":{
+        "name": "modificaton_date",
+        "alias": "d",
+        "required": false,
+        "help": "diferenciar archivos dmx por fecha de modificacion",
+        "action": "store_true"
+    },
+    "bandera_sha2":{
+        "name": "fingerprint",
+        "alias": "f",
+        "required": false,
+        "help": "diferenciar archivos dmx por figerprint",
+        "action": "store_true"
+    },
+    "json_salida":{
+        "name": "output",
+        "alias": "o",
+        "required": false,
+        "help": "ruta del archivo json que se va a crear con los resultaods"
+    }
+}
