@@ -56,7 +56,7 @@ class AppUnificarDMX:
 
         print(f"la lista es de tamaños {arreglox}")
     def fecha_modificacion(self):
-        print("funcion fecha de modificacion")
+        print("funcioon fecha de modificacion")
 
 
     def sha2(self):
