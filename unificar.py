@@ -54,7 +54,7 @@ class AppUnificarDMX:
             peso_archivo_carpeta1 = os.path.getsize(rutacompleta1)
             arreglox.append(peso_archivo_carpeta1)
 
-        print(f"la lista es tales {arreglox}")
+        print(f"la lista es de tamaños {arreglox}")
     def fecha_modificacion(self):
         print("funcion fecha de modificacion")
 
