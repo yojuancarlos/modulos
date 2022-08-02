@@ -35,7 +35,7 @@ class AppUnificarDMX:
         "correr"
         self.listar_directorio(self.directorio1)
         data = self.decorador(self.invocar_decorador)
-        data(self.tamano,self.fecha_modificacion,self.sha2, lista=self.lista, param2='b')
+        data(self.tamano, lista=self.lista, param2='b')
         print(data.__doc__)
 
 
@@ -43,8 +43,18 @@ class AppUnificarDMX:
         pass
 
     def tamano(self):
-        print("el tamaño fue de tales ffff")
+        peso_archivo_carpeta1=[]
+        rutacompleta1=[]
+        arreglox=[]
+        va = self.directorio1
+        lista1 = os.listdir(va)
 
+        for n in lista1:
+            rutacompleta1 = os.path.join(va, n)
+            peso_archivo_carpeta1 = os.path.getsize(rutacompleta1)
+            arreglox.append(peso_archivo_carpeta1)
+
+        print(f"la lista es tales {arreglox}")
     def fecha_modificacion(self):
         print("funcion fecha de modificacion")
 
