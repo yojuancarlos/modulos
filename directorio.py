@@ -9,6 +9,7 @@ class File:
         self.directorio1 = directorio
 
         def diccionarioderutas (self):
+            rutas=os.listdir(directorio)
             print()
 
         def lista(self,directorio):
