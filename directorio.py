@@ -3,30 +3,32 @@ import os
 class directorio:
 
 
-    def __init__(self, directorio1:str):
-        self.directorio1 = directorio1
+    def __init__(self):
+        self.directorio1 = directorio
 
-    def diccionarioderutas(self,directorio2):
-        rutas = os.listdir(directorio2)
-        diccionario_de_respuesta = {'nombre': rutas}
-        print(diccionario_de_respuesta)
-        diccionario_de_respuesta['archivosconmayorpeso'] = {}
-        for j in diccionario_de_respuesta["nombre"]:
-            print(j)
-            print(os.path.abspath(j))
-"""""
-        rutas=os.listdir(directorio2)
-        diccionario_de_respuesta = {'nombre':rutas}
-        print(diccionario_de_respuesta)
-        diccionario_de_respuesta['archivosconmayorpeso'] = {}
-        for j in diccionario_de_respuesta["nombre"]:
-            print(j)
-            print(rutas)
-            print(os.path.abspath(j))
-"""""
+    def diccionarioderutas(self,directorio):
+        for root, dirs, files in os.walk(directorio, topdown=True):
+
+            for file in files:
+                print(file)
+                print(f"{os.path.join(root,file)}")
+                print(type(os.path.join(root,file)))
+
+    def unirlistas(self):
+        lista1=self.diccionarioderutas("C:\pruebas\carpeta1")
+        lista2=self.diccionarioderutas("C:\pruebas\carpeta2")
+
 
 """""
-for (root,dirs,files) in os.walk('Test', topdown=true): 
+        diccionario_de_respuesta['archivosconmayorpeso']={}
+for elemento in rutasypeso:
+    key=elemento[0]
+    value=elemento[1]
+    diccionario_de_respuesta['archivosconmayorpeso'][key]=value
+"""""
+
+"""""
+for root,dirs,files in os.walk(directorio, topdown=True): 
         print (root) 
         print (dirs) 
         print (files) 
@@ -45,5 +47,5 @@ En el ejemplo anterior inicializa los valores de cada clave a None, mas puede in
 Nuevo Diccionario : {'python': 0.1, 'zope': 0.1, 'plone': 0.1}
 """
 
-direc=directorio("C:\pruebas\carpeta1")
+direc=directorio()
 direc.diccionarioderutas("C:\pruebas\carpeta1")
