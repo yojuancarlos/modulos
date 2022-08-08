@@ -1,6 +1,8 @@
 # modulos para archivos dmx
 este es un proyecto creado en pyton y que utiliza modulos para lograr que el proyecto sea reutizable, su funcionalidad es recorrer dos carpetas y filtrar archivos dmx, entre estos archivos se puede seleccionar una de varias funciones que existen para asi ver la imformacion que necesite como por ejemplo la ultima fecha de modificacion
-
+## explicacion de cada clase 
+> -main.py
+>> -ff
 ## librerias que se deben importar
 > - argparse
 > - os
