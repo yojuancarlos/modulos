@@ -26,22 +26,6 @@ class directorio:
 
         print(diccionario_de_respuesta)
 """""
-diccionario_de_respuesta['archivosconmayorpeso']={}
-for elemento in rutasypeso:
-    key=elemento[0]
-    value=elemento[1]
-    diccionario_de_respuesta['archivosconmayorpeso'][key]=value
-
-
-
-        diccionario_de_respuesta['archivosconmayorpeso']={}
-for elemento in rutasypeso:
-    key=elemento[0]
-    value=elemento[1]
-    diccionario_de_respuesta['archivosconmayorpeso'][key]=value
-"""""
-
-"""""
 for root,dirs,files in os.walk(directorio, topdown=True): 
         print (root) 
         print (dirs) 
