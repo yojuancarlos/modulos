@@ -3,7 +3,7 @@ este es un proyecto creado en pyton y que utiliza modulos para lograr que el pro
 ## explicacion de cada clase 
 > - esto lo hago en el codigo
 ## requerimientos obligatorios para iniciar el proyecto
-> - las rutas de la carpeta dir1 y dir2 deben existir 
+> - las rutas de la carpeta dir1 y dir2 deben existir y deben ser rutas diferentes
 > - se debe seleccionar almenos una de las opciones de las funciones 
 >>  las cuales son:
 >> - -size
@@ -19,7 +19,7 @@ este es un proyecto creado en pyton y que utiliza modulos para lograr que el pro
 
 >> -h, --help            show this help message and exit
 >> 
->> --dir1 DIR1, -1 DIR1  directorio uno con archivos dmx
+>> --dir1 DIR1, -1 DIR1    [requeride = true]    directorio uno con archivos dmx
 >> 
 >>  --dir2 DIR2, -2 DIR2  directorio dos con archivos dmx 
 >>  
@@ -30,7 +30,11 @@ este es un proyecto creado en pyton y que utiliza modulos para lograr que el pro
 >>  --fingerprint, -f     diferenciar archivos dmx por figerprint 
 >>  
 >>  --output OUTPUT, -o OUTPUT           ruta del archivo json que se va a crear con los resultaods
->>  
+
+
+|ca1|ca2|
+|---|---|
+|1|2|
 
 ## pasos para inciar la aplicacion 
 > - primero importar las librerias
