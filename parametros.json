@@ -19,7 +19,7 @@
         "action": "store_true"
     },
     "bandera_fecha":{
-        "name": "modificaton_date",
+        "name": "modification_date",
         "alias": "d",
         "required": false,
         "help": "diferenciar archivos dmx por fecha de modificacion",
@@ -35,7 +35,7 @@
     "json_salida":{
         "name": "output",
         "alias": "o",
-        "required": false,
-        "help": "ruta del archivo json que se va a crear con los resultaods"
+        "required": true,
+        "help": "ruta del archivo json que se va a crear con los resultados"
     }
 }
