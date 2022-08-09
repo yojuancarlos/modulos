@@ -4,7 +4,7 @@ este es un proyecto creado en pyton y que utiliza modulos para lograr que el pro
 > - esto lo hago en el codigo
 
 ## imformacion adicional
-> - usage: main.py [-h] --dir1 DIR1 --dir2 DIR2 [--size] [--modificaton_date] [--fingerprint] [--output OUTPUT]
+>  usage: main.py [-h] --dir1 DIR1 --dir2 DIR2 [--size] [--modificaton_date] [--fingerprint] [--output OUTPUT]
 
   modulo para filtrar archivos dmx
 
