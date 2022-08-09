@@ -1,7 +1,58 @@
 # modulos para archivos dmx
 este es un proyecto creado en pyton y que utiliza modulos para lograr que el proyecto sea reutizable, su funcionalidad es recorrer dos carpetas y filtrar archivos dmx, entre estos archivos se puede seleccionar una de varias funciones que existen para asi ver la imformacion que necesite como por ejemplo la ultima fecha de modificacion
+<<<<<<< HEAD
 ## pasos para iniciar el proyecto
 > - ejecutar el archivo main.py
+=======
+<<<<<<< HEAD
+## pasos para iniciar el proyecto
+> - ejecutar el archivo main.py
+=======
+## explicacion de cada clase 
+> - esto lo hago en el codigo
+## requerimientos obligatorios para iniciar el proyecto
+> - las rutas de la carpeta dir1 y dir2 deben existir y deben ser rutas diferentes
+> - se debe seleccionar almenos una de las opciones de las funciones 
+>>  las cuales son:
+>> - -size
+>> - -modification_date
+>> - -fingerprint
+>> 
+## imformacion adicional
+>  usage: main.py [-h] --dir1 DIR1 --dir2 DIR2 [--size] [--modificaton_date] [--fingerprint] --output OUTPUT
+
+> modulo para filtrar archivos dmx
+
+> options:
+
+>> -h, --help            show this help message and exit
+>> 
+>> --dir1 DIR1, -1 DIR1    [requeride = true]    directorio uno con archivos dmx
+>> 
+>>  --dir2 DIR2, -2 DIR2  directorio dos con archivos dmx 
+>>  
+>>  --size, -s            diferencar archivos dmx por tamaÃ±o
+>>  
+>>  --modificaton_date, -d         diferenciar archivos dmx por fecha de modificacion
+>>  
+>>  --fingerprint, -f     diferenciar archivos dmx por figerprint 
+>>  
+>>  --output OUTPUT, -o OUTPUT           ruta del archivo json que se va a crear con los resultaods
+
+
+|ca1|ca2|
+|---|---|
+|1|2|
+
+## pasos para inciar la aplicacion 
+> - primero importar las librerias
+> - ejecutar main.py
+> - escribir la ruta de la primera carpeta
+> - escribir la ruta de la segunda carpeta
+> - escribiir que funcion desea realizar
+> - escribir una ruuta de salida que no exista
+>>>>>>> 5e77e437040689e521524441c549ff2f73ba78b2
+>>>>>>> 94cf12eabe7266e2140002d47102686f3c27ebc8
 ## librerias que se deben importar
 > - argparse
 > - os
