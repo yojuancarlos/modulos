@@ -1,14 +1,23 @@
 # modulos para archivos dmx
 este es un proyecto creado en pyton y que utiliza modulos para lograr que el proyecto sea reutizable, su funcionalidad es recorrer dos carpetas y filtrar archivos dmx, entre estos archivos se puede seleccionar una de varias funciones que existen para asi ver la imformacion que necesite como por ejemplo la ultima fecha de modificacion
 ## explicacion de cada clase 
-> - main.py
->> - es el encargado de inciar el proyecto
-> - validaciones.py
->> - es un  modulo que contiene funciones basicas de validaciones como saber si es una un directoruio o una archivo
-> - parametros.py
->> - en el modulo que se encarga de recibir los argumentos escritos por consola
-> - unificar.py
->> - es un modulo que contiene funciones propias del proyecto como por ejemplo pasar  funciones como argumentos
+> - esto lo hago en el codigo
+
+## imformacion adicional
+> - usage: main.py [-h] --dir1 DIR1 --dir2 DIR2 [--size] [--modificaton_date] [--fingerprint] [--output OUTPUT]
+
+  modulo para filtrar archivos dmx
+
+  options:
+   -h, --help            show this help message and exit
+   --dir1 DIR1, -1 DIR1  directorio uno con archivos dmx
+   --dir2 DIR2, -2 DIR2  directorio dos con archivos dmx
+   --size, -s            diferencar archivos dmx por tamaÃ±o
+   --modificaton_date, -d
+                         diferenciar archivos dmx por fecha de modificacion
+   --fingerprint, -f     diferenciar archivos dmx por figerprint
+   --output OUTPUT, -o OUTPUT
+                          ruta del archivo json que se va a crear con los resultaods
 
 ## pasos para inciar la aplicacion 
 > - primero importar las librerias
