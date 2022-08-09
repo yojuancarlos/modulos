@@ -9,15 +9,24 @@ este es un proyecto creado en pyton y que utiliza modulos para lograr que el pro
 > modulo para filtrar archivos dmx
 
 > options:
+
 > -h, --help            show this help message and exit
+> 
 > --dir1 DIR1, -1 DIR1  directorio uno con archivos dmx
->   --dir2 DIR2, -2 DIR2  directorio dos con archivos dmx
->   --size, -s            diferencar archivos dmx por tamaÃ±o
->   --modificaton_date, -d
->                         diferenciar archivos dmx por fecha de modificacion
->   --fingerprint, -f     diferenciar archivos dmx por figerprint
->   --output OUTPUT, -o OUTPUT
-                          ruta del archivo json que se va a crear con los resultaods
+> 
+>  --dir2 DIR2, -2 DIR2  directorio dos con archivos dmx
+>  
+>  --size, -s            diferencar archivos dmx por tamaÃ±o
+>  
+>  --modificaton_date, -d
+>  
+>                        diferenciar archivos dmx por fecha de modificacion
+>                        
+>  --fingerprint, -f     diferenciar archivos dmx por figerprint
+>  
+>  --output OUTPUT, -o OUTPUT
+>  
+                         ruta del archivo json que se va a crear con los resultaods
 
 ## pasos para inciar la aplicacion 
 > - primero importar las librerias
