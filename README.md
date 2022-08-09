@@ -20,13 +20,13 @@ este es un proyecto creado en pyton y que utiliza modulos para lograr que el pro
 >  
 >  --modificaton_date, -d
 >  
->                        diferenciar archivos dmx por fecha de modificacion
+                       diferenciar archivos dmx por fecha de modificacion
 >                        
 >  --fingerprint, -f     diferenciar archivos dmx por figerprint
 >  
 >  --output OUTPUT, -o OUTPUT
 >  
-                         ruta del archivo json que se va a crear con los resultaods
+>                       ruta del archivo json que se va a crear con los resultaods
 
 ## pasos para inciar la aplicacion 
 > - primero importar las librerias
