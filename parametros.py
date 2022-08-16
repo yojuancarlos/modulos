@@ -79,11 +79,11 @@ class Parametros:
 
     #si todas las validaciones se cumplen se puede imprimir el mensaje
     def print_argst(self):
-<<<<<<< HEAD
-        if self.argumentos:
-=======
+
+
+
         if self.argumentos is not None:
->>>>>>> 94cf12eabe7266e2140002d47102686f3c27ebc8
+
             print(self.argumentos)
 
 

@@ -36,7 +36,7 @@ class directorio:
         rutasyarchivos=[]
         rutasyarchivos2 = []
         diccionario_de_respuesta = {}
-        for root, dirs, files in os.walk(directorio, topdown=True):
+        for root, dirs, files in os.walk(directorio):
             for file in files:
                 rutasyarchivos=os.path.join(root,file)
                 rutas.append((file,rutasyarchivos))
@@ -54,4 +54,3 @@ class directorio:
 
 direc=directorio()
 direc.diccionarioderutas("C:\pruebas\carpeta1")
-help(direc)
