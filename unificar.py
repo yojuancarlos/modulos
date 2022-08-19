@@ -11,6 +11,7 @@ from functools import wraps
 
 
 class AppUnificarDMX:
+    "clase unificar se encarga de contener multiples funciones  y ejerctar las funciones que el usuario requiera "
     directorio1 = None
     directorio2 = None
     json_salida = None
@@ -29,10 +30,11 @@ class AppUnificarDMX:
         self.lista = None
 
     def listar_directorio(self, directorio):
+        "esta funcion se encarga de retornar un lista con todos los elementos que se encuentren en la carpeta inculido supdirectorios"
         self.lista = os.listdir(directorio)
 
     def ejecutar(self,):
-        "correr"
+        "corre todas las funciones que se crearon en esta  clase"
         self.listar_directorio(self.directorio1)
         data = self.decorador(self.invocar_decorador)
         data(self.tamano, lista=self.lista, param2='b')

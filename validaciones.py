@@ -1,5 +1,5 @@
 import os
-
+"este es un scrip encargado de contener todas las validaciones que puedan ser reutilizados en proyectos que incluyan directorios"
 def existe_ruta(directorio):
     return  os.path.exists(directorio)
 
