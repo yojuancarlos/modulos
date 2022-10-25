@@ -80,6 +80,9 @@ class AppUnificarDMX:
             print(args)
             print(kwargs)
             print(kwargs["lista"])
+            # archive el archivo
+            #lista lista de archivos
+            #
             for archive in kwargs["lista"]:
                 for funcion in args:
                     print(f"se ejecuta {archive} con {funcion.__name__}")

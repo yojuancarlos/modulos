@@ -1,7 +1,9 @@
 import os
 import time
+#peso = 20
 
-path = "C:\pruebas\carpeta1"
-ti_m = os.path.getmtime(path)
-m_ti = time.ctime(ti_m)
-print( f" was last modified at {m_ti}")
+
+def peso():
+
+    value = "el peso es de tales"
+    return value

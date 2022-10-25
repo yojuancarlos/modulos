@@ -1,3 +1,5 @@
+import os
+
 def decorator(func):
     def ejecutar(*args, **kwargs):
         print(f"args en ejecutar {args}")
@@ -40,19 +42,12 @@ ejecu(ruta="c:/archivo.txt")
 ejecu2(ruta="d:/hola.txt")
 
 
-...................------------------
+
 
 
 def calcular_peso(self):
-    lidtapesos = []
-    rutabase = self.base_path
-    lista = core.os.listdir(rutabase)
-
-    for n in lista:
-        peso_archivo_carpeta1 = core.os.path.getsize(set.get_full_path())
-        lidtapesos.append(peso_archivo_carpeta1)
-
-    print(f"la lista es de tamaños {lidtapesos}")
+    peso_archivo = os.path.getsize('C:\pruebas\carpeta1')
+    return peso_archivo
 
 
 def calcular_fechademodificacion(self):

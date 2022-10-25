@@ -16,3 +16,8 @@ class File:
             response = json.load(f)
         return response
 
+    @staticmethod
+    def peso():
+        value = "el peso es de tales"
+        return value
+
