@@ -33,3 +33,24 @@ class directorio:
 
 direc=directorio()
 direc.diccionarioderutas("C:\pruebas\carpeta1")
+
+"""""
+
+                #1)usar arg para trear las funciones y uar su opcion de llamable para ejecutarlas de una vez esto hace que elimine el gettattr
+                #2) usar el kwargs pero pues esta si es mas complicada por que tengo que tener una lista de kwargs
+                for listafunciones in kwargs["lista"]:
+            #import sys
+           # sys.path.append('C:/Users/juanc/PycharmProjects/modulo_dmx')
+           # from file import File
+
+                    funcionaejecutar = getattr(module, listafunciones,'no_hubo_funcion')
+                    funcionaejecutar()
+                    diccionario_de_respuesta[archivo][rutabase]['nombredefuncion'] = funcionaejecutar()
+
+                    #for archive in kwargs["lista"]:
+                #for funcion in args:
+                    #print(f"se ejecuta {archive} con {funcion.__name__}")
+                    #funcion1 =funcion()
+                    #diccionario_de_respuesta[funcion1]={}
+                    #funcion()
+"""""

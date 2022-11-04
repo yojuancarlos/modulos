@@ -22,34 +22,23 @@ class directorio:
         #return iter(self.get_file_relative_paths())
         return iter(self.index)
 
-    def modi(self):
-        import os
-        import time
 
-        path = "C:\pruebas\carpeta1"
-
-        modificacion = []
-        rutacompleta=[]
-        lista = os.listdir(path)
-        for filename in lista:
-            rutacompleta = os.path.join(path,filename)
-            obtenertiempo = os.path.getmtime(rutacompleta)
-            fecham = time.ctime(obtenertiempo)
-            modificacion.append((fecham))
-
-        return modificacion
 
     def create_index(self):
         self.index = []
+        path = ["C:\pruebas\carpeta1","C:\pruebas\carpeta2"]
+       #"crear lista de rutas y recorrer"
+        #
+        for i in path:
 
-        for root, dirs, files in core.os.walk("C:\pruebas\carpeta1"):
-            for f in files:
-                full_path = core.os.path.join(root, f)
+            for root, dirs, files in core.os.walk(i):
+                for f in files:
+                    full_path = core.os.path.join(root, f)
 
-                tmp_file = core.File(full_path, "C:\pruebas\carpeta1")
-                self.index.append(tmp_file)
+                    tmp_file = core.File(full_path, i)
+                    self.index.append(tmp_file)
 
-                # Imprime las tres partes del File para probar self.use_full_path
+                    # Imprime las tres partes del File para probar self.use_full_path
 
 
     def diccionarioderutas(self,directorio):
@@ -77,7 +66,7 @@ class directorio:
 
 
         :param
-        """
+
         rutas=[]
         rutasyarchivos=[]
         modificacion=[]
@@ -134,32 +123,40 @@ class directorio:
         print(diccionario_de_respuesta)
         #print(modificacion)
         #print(f"rutas{rutas}")
+         """
 
 
 
     def funcioninterior(self,*args):
-
         diccionario_de_respuesta = {}
-
         for elemento in self.index:
             archivo = elemento.name  # archivo dmx
-            ruta = elemento.path  # subcarpetas
             rutabase = elemento.base_path  # ruta base
-            if not archivo == diccionario_de_respuesta:
+            ruta = elemento.path  # subcarpetas
+            if not archivo in diccionario_de_respuesta:
                 diccionario_de_respuesta[archivo] = {}
-            if not rutabase in diccionario_de_respuesta:
+
+            if not rutabase in diccionario_de_respuesta[archivo]:
                 diccionario_de_respuesta[archivo][rutabase] = {}
-            if not ruta in diccionario_de_respuesta:
-                diccionario_de_respuesta[archivo][rutabase]['ruta'] = ruta
+                diccionario_de_respuesta[archivo][rutabase]['ruta'] = []
+
+
+
+            if not ruta in diccionario_de_respuesta[archivo][rutabase]['ruta']:
+
+                #diccionario_de_respuesta[archivo][rutabase]['ruta'].append(ruta)
+                diccionario_de_respuesta[archivo][rutabase][ruta]={}
+
+
+
 
 
 
             for funcionaejecutar in args:
 
-                #print(funcionaejecutar(elemento.get_full_path()))
-                diccionario_de_respuesta[archivo][rutabase][funcionaejecutar.__name__] = funcionaejecutar(elemento.get_full_path())
+                diccionario_de_respuesta[archivo][rutabase][ruta][funcionaejecutar.__name__] = funcionaejecutar(elemento.get_full_path())
         print(core.json.dumps(diccionario_de_respuesta,indent=4))
-        print(diccionario_de_respuesta)
+
 
 
 
@@ -167,6 +164,7 @@ class directorio:
 
 direc=directorio()
 direc.create_index()
-direc.funcioninterior(File.calculate_fingerprint)
+direc.funcioninterior(File.calcular_peso)
 
 
+""
