@@ -138,14 +138,14 @@ class directorio:
 
             if not rutabase in diccionario_de_respuesta[archivo]:
                 diccionario_de_respuesta[archivo][rutabase] = {}
-                diccionario_de_respuesta[archivo][rutabase]['ruta'] = []
-
+                diccionario_de_respuesta[archivo][rutabase]['ruta'] = {}
+               # print(diccionario_de_respuesta[archivo][rutabase]['ruta'])
 
 
             if not ruta in diccionario_de_respuesta[archivo][rutabase]['ruta']:
 
                 #diccionario_de_respuesta[archivo][rutabase]['ruta'].append(ruta)
-                diccionario_de_respuesta[archivo][rutabase][ruta]={}
+                diccionario_de_respuesta[archivo][rutabase]['ruta'][ruta]={}
 
 
 
@@ -154,7 +154,7 @@ class directorio:
 
             for funcionaejecutar in args:
 
-                diccionario_de_respuesta[archivo][rutabase][ruta][funcionaejecutar.__name__] = funcionaejecutar(elemento.get_full_path())
+                diccionario_de_respuesta[archivo][rutabase]['ruta'][ruta][funcionaejecutar.__name__] = funcionaejecutar(elemento.get_full_path())
         print(core.json.dumps(diccionario_de_respuesta,indent=4))
 
 
